@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+const frameguard = require("frameguard");
+app.use(frameguard({action: 'deny'}))
+const hidePoweredBy = require("hide-powered-by");
+app.use(hidePoweredBy())
 
 
 
